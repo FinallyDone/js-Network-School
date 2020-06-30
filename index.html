@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tensor School</title>
+    <link href="styles/pageMain_styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="body">
+    <script language='JavaScript' type='text/JavaScript' src='scripts/components/mainPage/main-page.js'></script>
+    <!-- Settings of main content to be in the center --->
+    <div class="main_limits">
+        <!-- Header what has icon, name and information -->
+        <header class="header">
+            <div class="header__logo header__logo_disp_flex header__logo_line_after">
+                <img class="header__img-tensor" src="img/icons/logo.png" alt="Tensor logo" />
+                <p class="header__text-name">Tensor School</p>
+            </div>
+            <p class="header__text-about" title="Это страница школы Тензор в городе Уфа. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.">Это страница школы Тензор в городе Уфа. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.</p>
+        </header>
+        <!-- Here you can find all students in cards -->
+        <div class="students students_disp_grid">
+            <!-- 
+                Example of one card of student
+                Has: Photo, Name, Surname, University, Year of Univ.,
+                id of student in DATA, position of card <- (can't be changed) 
+            -->
+           
+        </div>
+        <!-- 
+            Window of profile or "PopUp"
+            Has: 
+                header
+                Has:
+                    Last time of online of person, icon for closing
+                body
+                Has:
+                    Photo, Icon of dialogue, Icon for adding to friends
+                    Name, Surname, status, Icon of hidding content
+                    city, University, Year of Univ., Birthday, 
+                    how old, number of phone, gallery of user,
+                    Friends
+         -->
+        <div class="window-profile window-profile_size window-profile_disp_grid window-profile_text" onmouseleave="MouseLeaveWindow(event)">
+            <!-- Header -->
+            <div class="window-profile__header window-profile__header_disp_flex window-profile__header_after">
+                <span class="window-profile__online-status">Был(а) сегодня в 00:00</span>
+                <img class="window-profile__icon-close window-profile__icon-close_hover" src="img/icons/close.png" alt="icon" />
+            </div>
+            <!-- body -->
+            <div class="window-profile__body window-profile__body_disp_grid">
+                <div class="window-profile__information window-profile__information_disp_grid">
+                    <span class="window-profile__name-surname">Маша Машутина</span>
+                    <div class="window-profile__status">
+                        <span class="window-profile__status-word">Статус</span>
+                        <span class="window-profile__status-word-changed window-profile__text-changed"></span>
+                    </div>
+                    <div class="window-profile__hide-open-information window-profile__hide-open-information_disp_flex">
+                        <div class="window-profile__button-hide window-profile__button-hide_disp_flex">
+                            <span class="window-profile__button-hide_line"></span>
+                            <span class="window-profile__button-hide_text"> Скрыть </span>
+                            <span class="window-profile__button-hide_line"></span>
+                        </div>
+                        <div class="window-profile__city window-profile__information-beauty-show_disp_grid">
+                            <span class="window-profile__city-word">Город</span>
+                            <span class="window-profile__city-word-changed window-profile__text-changed"></span>
+                        </div>
+                        <div class="window-profile__where-study window-profile__information-beauty-show_disp_grid">
+                            <span class="window-profile__university-word">Университет</span>
+                            <span class="window-profile__university-word-changed window-profile__text-changed"></span>
+                            <span class="window-profile__university-year-word">Курс</span>
+                            <span class="window-profile__university-year-word-changed window-profile__text-changed"></span>
+                        </div>
+                        <div class="window-profile__born window-profile__information-beauty-show_disp_grid">
+                            <span class="window-profile__birth-day">День Рождения</span>
+                            <span class="window-profile__birth-day-DM window-profile__text-changed"></span>
+                            <span class="window-profile__years window-profile__text-changed"></span>
+                            <span class="window-profile__years-word window-profile__text-changed">года</span>
+                        </div>
+                        <div class="window-profile__phone window-profile__information-beauty-show_disp_grid">
+                            <span class="window-profile__phone-word">Номер телефона</span>
+                            <span class="window-profile__phone-number window-profile__text-changed">+7 (987) 555 55 55</span>
+                        </div>
+                        <div class="window-profile__gallery window-profile__gallery_disp_grid">
+                            <span class="window-profile__gallery-word">Галерея:</span>
+                            <img class="window-profile__gallery-img window-profile__gallery-img_hover" src="img/Users/id1/Personal/1.jpg" alt="img">
+                            <img class="window-profile__gallery-img window-profile__gallery-img_hover" src="img/Users/id1/Personal/2.jpg" alt="img">
+                            <img class="window-profile__gallery-img window-profile__gallery-img_hover" src="img/Users/id1/Personal/3.jpg" alt="img">
+                            <img class="window-profile__gallery-img window-profile__gallery-img_hover" src="img/Users/id1/Personal/4.jpg" alt="img">
+                        </div>
+                        <div class="window-profile__friends window-profile__friends-word_disp_grid">
+                            <span class="window-profile__friends-word">Друзья:</span>
+                            <img class="window-profile__friends-img window-profile__friends-img_hover" src="img/avatars/ava2.png" alt="img">
+                            <img class="window-profile__friends-img window-profile__friends-img_hover" src="img/avatars/ava3.png" alt="img">
+                            <img class="window-profile__friends-img window-profile__friends-img_hover" src="img/avatars/ava4.png" alt="img">
+                            <img class="window-profile__friends-img window-profile__friends-img_hover" src="img/avatars/ava5.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="window-profile__body-photo-buttons window-profile__body-photo-buttons_disp_flex">
+                    <img class="window-profile__avatar window-profile__avatar_size" src="img/avatars/NoAvatar.png" alt="Avatar" />
+                    <img class="window-profile__Dialogue window-profile__button_size" src="img/icons/Dialogue.png" alt="Dialogue" />
+                    <img class="window-profile__Add_To_Friend window-profile__button_size" src="img/icons/Add_To_Friend.png" alt="Add_To_Friend" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

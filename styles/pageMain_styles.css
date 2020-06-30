@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Made for making all content be in the center */
+.main_limits {
+    min-width: 320px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* properties of header */
+/* header has 1 img, 1 name */
+.header__logo {
+    padding: 30px;
+}
+
+.header__logo_disp_flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.header__logo_line_after:after {
+    content: "";
+    vertical-align: middle;
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background: black;
+    margin-top: 45px;
+}
+
+
+.header__img-tensor {
+    margin: 6px;
+    height: 20px;
+    width: 20px;
+}
+
+.header__text-name {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    margin: 2px;
+    white-space: nowrap;
+}
+
+.header__text-about {
+    margin: 0 auto;
+    text-align: center;
+    padding: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* properties of all Students */
+/* Has N number of 1 student */
+.students_disp_grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+/* properties of 1 student */
+/* Student has 1 photo, 1 name, 1 school */
+.student_disp_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.student_size {
+    width: 160px;
+    height: 230px;
+    padding: 14px;
+}
+
+/* Shadow for user to make sure what he can click on student */
+.student_hover:hover {
+    content: '';
+    cursor: pointer;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+}
+
+.student__about_disp_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.student__name {
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.student__school {
+    margin-top: 6px;
+    color: grey;
+}
+
+.student__photo_size {
+    border-radius: 80px;
+    height: 120px;
+    width: 120px;
+}
+
+.student__photo_position {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student__id {
+    display: none;
+}
+
+.student__position {
+    display: none;
+}
+
+/* when click on student it pops up */
+.window-profile {
+    margin-top: 0px;
+    margin-left: 0px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    background-color: #fdfcff;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* style of text what can't be changed */
+.window-profile_text {
+    font-size: 12px;
+    color: grey;
+}
+
+/* style of text what can be changed and will be */
+.window-profile__text-changed {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+}
+
+.window-profile_size {
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+.window-profile_disp_grid {
+    display: none;
+    grid-template-rows: 24px auto;
+}
+
+/* Items of window-profile */
+.window-profile__header_after:after {
+    content: "";
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #6f7cab;
+    margin-top: 12px;
+
+}
+
+/* Header of window profile and it's elements */
+.window-profile__header_disp_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-profile__online-status {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.window-profile__icon-close {
+    width: 14px;
+    height: 14px;
+    padding-right: 6px;
+}
+
+.window-profile__icon-close_hover {
+    cursor: pointer;
+}
+
+/* Body of window profile and it's elements*/
+.window-profile__body {
+    text-align: start;
+    padding-left: 8px;
+
+}
+
+.window-profile__body_disp_grid {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+}
+
+.window-profile__body-photo-buttons_disp_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.window-profile__avatar_size {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    padding-bottom: 14px;
+    border-radius: 40px;
+}
+
+.window-profile__button_size {
+    width: 100px;
+    align-items: center;
+    padding: 3px;
+}
+
+/* Main information in window profile */
+.window-profile__information_disp_grid {
+    display: grid;
+    grid-template-rows: minmax(36px,42px) 20px auto;
+    align-items: center;
+}
+
+.window-profile__name-surname {
+    color: black;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.window-profile__status {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 6px;
+}
+
+.window-profile__hide-open-information_disp_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+    padding-left: 4px;
+}
+
+.window-profile__information-beauty-show_disp_grid {
+    display: grid;
+    grid-template-columns: 100px 80px 40px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.window-profile__button-hide_disp_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.window-profile__button-hide_line {
+    content: "";
+    vertical-align: middle;
+    margin-top: 8px;
+    width: 100px;
+    height: 2px;
+    background: #6f7cab;
+}
+
+.window-profile__button-hide_text {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.window-profile__university-year-word {
+    padding-left: 6px;
+}
+
+.window-profile__years {
+    text-align: center;
+}
+
+.window-profile__birth-day {
+    padding-left: 0px;
+}
+
+.window-profile__birth-day-DM {
+    margin-left: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.window-profile__phone {
+    margin-top: 2px;
+}
+
+/* 
+   !!! Gallery and Friends have same options but   !!!
+   !!! it's made if you need to change one of them !!!
+*/
+/* Gallery in window profile */
+.window-profile__gallery_disp_grid {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 80px 25px 25px 25px 25px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 4px;
+}
+
+.window-profile__gallery-img_hover:hover {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.window-profile__gallery-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+}
+
+.window-profile__gallery-word {
+    padding: 10px;
+}
+
+/* Friends in window profile */
+.window-profile__friends-word_disp_grid {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 80px 25px 25px 25px 25px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 8px;
+}
+
+.window-profile__friends-img_hover:hover {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.window-profile__friends-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+}
+
+.window-profile__friends-word {
+    padding: 10px;
+}
+
+/* Used for adaptation for phones */
+@media screen and (max-width: 650px) {
+
+    .students {
+        grid-template-columns: repeat(2, auto);
+
+    }
+
+    @media screen and (max-width: 420px) {
+
+        .students {
+            grid-template-columns: 1fr;
+        }
+
+        .student__photo_size {
+            padding: 0px;
+        }
+
+        .student__photo_position {
+            margin: 0px;
+            margin-right: 10px;
+        }
+
+        .student__name,
+        .student__school {
+            font-size: 18px;
+            justify-content: center;
+            text-align: start;
+            min-width: 100px;
+            max-width: 200px;
+            width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0px;
+            margin-right: 4px;
+        }
+
+        .student_size {
+            min-width: 320px;
+            width: 300px;
+            height: 140px;
+            padding: 0px;
+        }
+
+        .student_disp_flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .window-profile_text {
+            font-size: 11px;
+        }
+
+        .window-profile__avatar_size {
+            width: 75px;
+            height: 75px;
+            padding: 4px;
+            border-radius: 40px;
+        }
+
+        .window-profile__button_size {
+            width: 75px;
+            height: 22px;
+        }
+
+        .window-profile__Add_To_Friend{
+            display: none;
+        }
+        .window-profile__body_disp_grid {
+            display: grid;
+            grid-template-columns: 220px auto;
+        }
+
+        .window-profile__information-beauty-show_disp_grid {
+            display: grid;
+            grid-template-columns: 90px 70px 30px auto;
+        }
+
+        .window-profile__name-surname {
+            padding-top: 2px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .window-profile__information_disp_grid {
+            grid-template-rows: auto 16px 1fr;
+        }
+
+        .window-profile__university-year-word {
+            padding-left: 2px;
+        }
+
+        .window-profile__body-photo-buttons_disp_flex {
+            justify-content: center;
+        }
+
+        .window-profile__button-hide {
+            display: none;
+        }
+
+        .window-profile__gallery {
+            display: none;
+        }
+
+        .window-profile__friends {
+            display: none;
+        }
+    }
